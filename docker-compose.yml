@@ -1,0 +1,31 @@
+# Reference compose file -- not tested in this project's build
+# environment (see Dockerfile header). The commented-out settings below
+# are the actually important part: they show how to run the local
+# execution sandbox with real OS-level isolation for anything beyond
+# local/trusted use. Uncomment them once you've confirmed the app still
+# works the way you need with them on (a fully locked-down container
+# can't reach the network at all, including for pip/apt operations done
+# at runtime -- there shouldn't be any, but double-check your setup).
+
+services:
+  code-review-agent:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_DEBUG=false
+      - EXECUTION_TIMEOUT_SECONDS=8
+      - EXECUTION_MEMORY_MB=128
+    volumes:
+      - ./backend/data:/app/backend/data
+    # --- Recommended hardening for public/untrusted deployments ---
+    # network_mode: "none"        # blocks all network access from executed code
+    # read_only: true             # root filesystem read-only; add tmpfs below for writes
+    # tmpfs:
+    #   - /tmp
+    # cap_drop:
+    #   - ALL
+    # security_opt:
+    #   - no-new-privileges:true
+    # pids_limit: 64
+    restart: unless-stopped

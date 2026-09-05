@@ -1,0 +1,74 @@
+:root {
+  /* --- Surfaces (Deep Space with Teal Tint) --- */
+  --bg-void: #050a12;
+  --bg-panel: rgba(8, 18, 32, 0.85);
+  --bg-raised: rgba(12, 30, 52, 0.5);
+  --bg-raised-hover: rgba(18, 42, 72, 0.65);
+  --bg-surface: rgba(0, 255, 200, 0.03);
+  --bg-surface-strong: rgba(0, 255, 200, 0.07);
+  --line: rgba(0, 220, 180, 0.15);
+  --line-soft: rgba(0, 220, 180, 0.07);
+
+  /* --- Text --- */
+  --ink: #e8f4ff;
+  --ink-dim: #a0c4e8;
+  --ink-secondary: #a0c4e8;
+  --ink-faint: #5a8ab4;
+
+  /* --- Brand Accent (Electric Cyan + Magenta Energy) --- */
+  --brand: #00e5c8;
+  --brand-dim: #00c4ac;
+  --brand-glow: rgba(0, 229, 200, 0.25);
+  --brand-gradient: linear-gradient(135deg, #00e5c8 0%, #00b4d8 50%, #9b5de5 100%);
+  --brand-gradient-hover: linear-gradient(135deg, #33ffdb 0%, #33c9e8 50%, #b07af0 100%);
+
+  /* --- Functional Severity Colors --- */
+  --critical: #ff3d71;
+  --critical-bg: rgba(255, 61, 113, 0.12);
+  --warning: #ffaa00;
+  --warning-bg: rgba(255, 170, 0, 0.1);
+  --info: #00b4d8;
+  --info-bg: rgba(0, 180, 216, 0.1);
+  --success: #00f5a0;
+  --success-bg: rgba(0, 245, 160, 0.1);
+
+  /* --- Typography --- */
+  --font-display: "Outfit", "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* --- Spacing Scale --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* --- Radii --- */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.15, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.25, 1.25, 0.5, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.35s;
+  --dur-slow: 0.6s;
+
+  /* --- Shadow Glows --- */
+  --shadow-lift: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 229, 200, 0.1);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 15px rgba(0, 229, 200, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01s;
+    --dur-base: 0.01s;
+    --dur-slow: 0.01s;
+  }
+}
+

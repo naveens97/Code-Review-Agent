@@ -1,0 +1,45 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+*.pyd
+*__mypyc*
+
+# --- Stray pip installs in backend ---
+backend/bin/
+backend/certifi/
+backend/certifi-*/
+backend/charset_normalizer/
+backend/charset_normalizer-*/
+backend/idna/
+backend/idna-*/
+backend/requests/
+backend/requests-*/
+backend/urllib3/
+backend/urllib3-*/
+backend/.venv/
+backend/.pytest_cache/
+
+# --- Data ---
+backend/data/*.db
+backend/data/*.db-journal
+!backend/data/.gitkeep
+
+# --- Node / frontend ---
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Env ---
+.env
+.env.local
+.env.*
