@@ -261,7 +261,7 @@ class GeminiAnalyzer:
         if not self.api_key or self.api_key == "DEMO":
             return "Demo mode: I cannot answer questions about this code right now. Try upgrading your API key!"
 
-        url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent"
+        url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent"
         headers = {
             "Content-Type": "application/json",
             "x-goog-api-key": self.api_key
